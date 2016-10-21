@@ -1,0 +1,44 @@
+<md-content ng-attr-style="background: rgb({{color.red}},{{color.green}},{{color.blue}})" layout="column" layout-align="center center"  layout-margin layout-padding layout-fill flex>
+
+  <div id="squarePanel" ng-class="screenIsSmall ? 'layout-fill' : none" layout-align="center center" layout="column" >
+
+
+    <div layout="row" layout-align="center center" flex>
+      <md-slider-container flex>
+        <span ng-attr-style="color: rgb({{color.red}},0,0);" >R</span>
+        <md-slider flex min="0" max="255" ng-model="color.red" aria-label="red" id="red-slider" class="md-primary">
+        </md-slider>
+      </md-slider-container>
+      <md-input-container flex="15" hide-xs>
+        <input flex type="number" ng-model="color.red" aria-label="red" aria-controls="red-slider">
+      </md-input-container>
+    </div>
+
+
+    <div layout="row" layout-align="center center" flex>
+      <md-slider-container flex>
+        <span ng-attr-style="color: rgb(0,{{color.green}},0);" >G</span>
+        <md-slider flex min="0" max="255"   ng-init="255" ng-model="color.green"  aria-label="green" id="green-slider" class="md-primary">
+        </md-slider>
+      </md-slider-container>
+
+      <md-input-container flex="15" hide-xs>
+        <input flex type="number" ng-model="color.green" aria-label="green" aria-controls="green-slider">
+      </md-input-container>
+    </div>
+
+
+    <div layout="row" layout-align="center center" flex>
+      <md-slider-container flex>
+        <span ng-attr-style="color: rgb(0,0,{{color.blue}});">B</span>
+        <md-slider flex  min="0" max="255"   ng-model="color.blue" aria-label="blue" id="blue-slider" class="md-primary">
+        </md-slider>
+      </md-slider-container>
+      <md-input-container flex="15" hide-xs>
+        <input flex type="number" ng-model="color.blue" aria-label="blue" aria-controls="blue-slider">
+      </md-input-container>
+    </div>
+  </div>
+
+
+</md-content>
